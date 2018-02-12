@@ -6,7 +6,7 @@ This starter provides a service to talk to the jeopardy api. It already displays
 * If the answer is correct then add the point value to the to the users score, If it's wrong, subtract the point value from the users score.
 * After the users answers a question display another random question from the API.
 
-**HARDER** 
+**HARDER**  
 Use two components. 
 
 *One component should display the question, category, and point value.
