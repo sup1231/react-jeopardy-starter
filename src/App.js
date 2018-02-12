@@ -18,7 +18,7 @@ class App extends Component {
   getNewQuestion = () => {
     return this.client.getQuestion().then(result => {
       this.setState({
-        question: result.data
+        question: result.data[0]
       })
     })
   }
