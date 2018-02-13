@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { JeopardyService } from "./services/JeopardyService";
 import './App.css';
+import Question from "./Question"
 
 class App extends Component {
 
@@ -64,15 +65,15 @@ class App extends Component {
       this.category = this.state.question.category.title
     }
     return (
-       <form onSubmit={this.handleSubmit}>    
+      
       <div>
-        <h2> Question : {this.state.question.question} </h2>
-        <h2>category: {this.category}</h2>
-        <h2> Value : {this.state.question.value} </h2>
-        <h2> Score: {this.state.score} </h2>
-        <input type="text" name="answer"/>
-        <button >Submit</button>
-      </div></form> 
+       <Question question={this.state.question.question}
+        category={this.category}
+        value={this.state.question.value}
+        score={this.state.score}
+        answerHandler={this.handleSubmit}
+        />
+       </div>
     );
   }
 }
